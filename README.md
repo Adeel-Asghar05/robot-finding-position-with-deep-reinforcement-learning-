@@ -33,3 +33,17 @@ Turning penalty/bonus
 ✅ Training with PPO (Stable-Baselines3)
 
 ✅ URDF robot model (ryres.urdf) with wheels, arms, and grippers
+
+🤖 Robot Model (URDF)
+
+The robot is defined in ryres.urdf, which contains:
+
+Base link
+
+Wheels (drive + support wheels)
+
+Arms & grippers
+
+Meshes (STL files in meshe/ directory)
+
+PyBullet loads this URDF to simulate physics, dynamics, and collisions.
