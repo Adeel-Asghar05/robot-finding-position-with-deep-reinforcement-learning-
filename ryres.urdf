@@ -1,0 +1,463 @@
+<?xml version="1.0" ?>
+<robot name="mveable-robot">
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.011355488307203586 0.0009044426549021452 0.12892060883395973" rpy="0 0 0"/>
+    <mass value="5.534324081178064"/>
+    <inertia ixx="0.064462" iyy="0.044707" izz="0.077649" ixy="2e-05" iyz="-0.000442" ixz="-0.001255"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <geometry>
+      <mesh filename="meshe/tt/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+      <material name="iron">
+      <color rgba="0.4392 0.5020 0.5647 1"/>
+    </material>
+  </visual>
+
+    <collision>
+    <origin xyz="0 0 0.162" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.23 0.3 0.17"/>
+    </geometry>
+  </collision>
+
+      <collision>
+    <origin xyz="0 0 0.064" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.332 0.4064 0.025"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="g-rotater_1">
+  <!-- <inertial>
+    <origin xyz="-0.0402096855740077 -0.00941384742997664 -0.01124271336042676" rpy="0 0 0"/>
+    <mass value="0.07884148908104233"/>
+    <inertia ixx="6.2e-05" iyy="0.000102" izz="9.2e-05" ixy="-0.0" iyz="-2.8e-05" ixz="-0.0"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="-0.0402096855740077 -0.00941384742997664 -0.01124271336042676" rpy="0 0 0"/>
+  <mass value="0.05"/>
+  <inertia ixx="3.9319399419428326e-05" iyy="6.468675388357563e-05" izz="5.8344915267538804e-05"
+           ixy="-0.0" iyz="-1.7757148124903114e-05" ixz="-0.0"/>
+</inertial>
+
+  <visual>
+    <origin xyz="-0.034482 0.308496 -0.414926" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/g-rotater_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+      <material name="iron">
+      <color rgba="0.4392 0.5020 0.5647 1.0"/>
+    </material>
+  </visual>
+  <!-- <collision>
+    <origin xyz="-0.034482 0.308496 -0.414926" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/g-rotater_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision> -->
+</link>
+
+<link name="gripper2_1">
+  <!-- <inertial>
+    <origin xyz="0.016156122701246386 -0.029381873744162013 -0.009347336727492439" rpy="0 0 0"/>
+    <mass value="0.02677908900914269"/>
+    <inertia ixx="1.3e-05" iyy="8e-06" izz="8e-06" ixy="1e-06" iyz="-1e-06" ixz="2e-06"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="0.016156122701246386 -0.029381873744162013 -0.009347336727492439" rpy="0 0 0"/>
+  <mass value="0.015"/>
+  <inertia ixx="7.281801107327615e-06" iyy="4.4811083737400704e-06" izz="4.4811083737400704e-06"
+           ixy="5.601385467175088e-07" iyz="-5.601385467175088e-07" ixz="1.1202770934350176e-06"/>
+</inertial>
+
+  <visual>
+    <origin xyz="-0.015782 0.36092 -0.326708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="iron">
+      <color rgba="0.25 0.27 0.30 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.015782 0.36092 -0.326708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/gripper2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper1_1">
+  <!-- <inertial>
+    <origin xyz="-0.016157120374269147 -0.02938187374415746 -0.009347336727495437" rpy="0 0 0"/>
+    <mass value="0.02677908900914269"/>
+    <inertia ixx="1.3e-05" iyy="8e-06" izz="8e-06" ixy="-1e-06" iyz="-1e-06" ixz="-2e-06"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="-0.016157120374269147 -0.02938187374415746 -0.009347336727495437" rpy="0 0 0"/>
+  <mass value="0.015"/>
+  <inertia ixx="7.281801107327615e-06" iyy="4.4811083737400704e-06" izz="4.4811083737400704e-06"
+           ixy="-5.601385467175088e-07" iyz="-5.601385467175088e-07" ixz="-1.1202770934350176e-06"/>
+</inertial>
+
+  <visual>
+    <origin xyz="0.028218 0.36092 -0.326708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="iron">
+      <color rgba="0.25 0.27 0.30 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.028218 0.36092 -0.326708" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/gripper1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="g-base_1">
+  <!-- <inertial>
+    <origin xyz="-4.988364919042074e-07 -0.001857462218262551 -0.0022143417479583705" rpy="0 0 0"/>
+    <mass value="0.0205847145536056"/>
+    <inertia ixx="4e-06" iyy="6e-06" izz="7e-06" ixy="-0.0" iyz="2e-06" ixz="-0.0"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="-4.988364919042074e-07 -0.001857462218262551 -0.0022143417479583705" rpy="0 0 0"/>
+  <mass value="0.015"/>
+  <inertia ixx="2.9147841639363634e-06" iyy="4.372176245904545e-06" izz="5.100872286888636e-06"
+           ixy="-0.0" iyz="1.4573920819681817e-06" ixz="-0.0"/>
+</inertial>
+
+  <visual>
+    <origin xyz="0.006218 0.368739 -0.343059" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/g-base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+     <material name="iron">
+      <color rgba="0.4392 0.5020 0.5647 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.006218 0.368739 -0.343059" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/g-base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm2_1">
+  <!-- <inertial>
+    <origin xyz="-0.05210636298215546 -0.033197513382281635 -0.03583751076148772" rpy="0 0 0"/>
+    <mass value="1.6443442355078592"/>
+    <inertia ixx="0.012048" iyy="0.012118" izz="0.010104" ixy="-0.000255" iyz="-0.004886" ixz="-0.000271"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="-0.05210636298215546 -0.033197513382281635 -0.03583751076148772" rpy="0 0 0"/>
+  <mass value="1.0"/>
+  <inertia ixx="0.0073269329741524275" iyy="0.007369503135854841" izz="0.006144698769159706"
+           ixy="-0.00015507701763021824" iyz="-0.0029713972868284162" ixz="-0.00016480734030505543"/>
+</inertial>
+
+  <visual>
+    <origin xyz="-0.051025 0.211604 -0.529812" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/arm2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+     <material name="iron-grey">
+    <color rgba="0.650 0.710 0.675 1.0"/>
+    </material>
+  </visual>
+   <!-- <collision>
+    <origin xyz="-0.051025 0.211604 -0.529812" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/arm2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision> -->
+  <collision>
+    <origin xyz="-0.057 -0.018 -0.015" rpy="0.95 0 0"/>
+    <geometry>
+      <box size="0.081 0.22 0.089"/>
+    </geometry>
+  </collision>
+
+   <collision>
+
+    <origin xyz="-0.058 -0.12 -0.145 " rpy="0 1.5708  0"/>
+    <geometry>
+      <cylinder radius="0.039" length="0.081"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rpd-link_1">
+  <!-- <inertial>
+    <origin xyz="-1.739580926741254e-05 2.1838972906196297e-05 0.1835475963665854" rpy="0 0 0"/>
+    <mass value="5.729762781270824"/>
+    <inertia ixx="0.07381" iyy="0.073767" izz="0.005196" ixy="-1e-06" iyz="-2.3e-05" ixz="2e-05"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="-1.739580926741254e-05 2.1838972906196297e-05 0.1835475963665854" rpy="0 0 0"/>
+  <mass value="2.5"/>
+  <inertia ixx="0.03220464913541736" iyy="0.03218588745118998" izz="0.0022671095638481043"
+          ixy="-4.3631823784605546e-07" iyz="-1.0035319470459277e-05" ixz="8.726364756921112e-06"/>
+</inertial>
+
+  <visual>
+    <origin xyz="-0.003 0.088 -0.0942" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/rpd-link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="iron-grey">
+    <color rgba="0.650 0.710 0.675 1.0"/>
+    </material>
+  </visual>
+   <collision>
+    <origin xyz="0 0 .267" rpy="0 0 1.5708 "/>
+    <geometry>
+      <cylinder radius="0.035" length="0.215"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm1_1">
+  <!-- <inertial>
+    <origin xyz="0.05049635554771116 0.013179852952040147 -0.0044920256989148255" rpy="0 0 0"/>
+    <mass value="1.527432607495631"/>
+    <inertia ixx="0.011163" iyy="0.006969" izz="0.011633" ixy="2.1e-05" iyz="0.00373" ixz="-1.7e-05"/>
+  </inertial> -->
+  <inertial>
+  <origin xyz="0.05049635554771116 0.013179852952040147 -0.0044920256989148255" rpy="0 0 0"/>
+  <mass value="1.0"/>
+  <inertia ixx="0.007308342080180405" iyy="0.004562558089830444" izz="0.007616047963696018"
+           ixy="1.3748560752825272e-05" iyz="0.002442006267049441" ixz="-1.112978727609665e-05"/>
+</inertial>
+
+  <visual>
+    <origin xyz="-0.038025 0.090772 -0.4592" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/arm1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+     <material name="iron">
+      <color rgba="0.25 0.27 0.30 1.0"/>
+    </material>
+  </visual>
+  <!-- <collision>
+    <origin xyz="-0.038025 0.090772 -0.4592" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/arm1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision> -->
+     <collision>
+    <origin xyz="0.05 0.02 -0.007" rpy="-0.47 0 0"/>
+    <geometry>
+      <box size="0.08 .35 0.081"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="b-tyre1_1">
+  <inertial>
+    <origin xyz="0.019891554420791463 8.962515745755684e-05 1.5912887308865142e-05" rpy="0 0 0"/>
+    <mass value="0.874319332902454"/>
+    <inertia ixx="0.000592" iyy="0.000363" izz="0.000365" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1666 0.160793 -0.0422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/b-tyre1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1666 0.160793 -0.0422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/b-tyre1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="b-tyre2_1">
+  <inertial>
+    <origin xyz="-0.019891915572050056 -1.0590898605417065e-05 7.175178885707179e-05" rpy="0 0 0"/>
+    <mass value="0.8772731128882164"/>
+    <inertia ixx="0.000595" iyy="0.000365" izz="0.000367" ixy="-0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1651 0.160793 -0.0422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/b-tyre2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1651 0.160793 -0.0422" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/b-tyre2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="f-wheel-rotater_1">
+  <inertial>
+    <origin xyz="1.1596227827330677e-17 0.008781298772219504 -0.023541350712176598" rpy="0 0 0"/>
+    <mass value="0.08417462107375022"/>
+    <inertia ixx="4.1e-05" iyy="4.5e-05" izz="2.3e-05" ixy="-0.0" iyz="1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.1662 -0.07597" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/f-wheel-rotater_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.1662 -0.07597" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/f-wheel-rotater_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="f-wheel_1">
+  <inertial>
+    <origin xyz="-0.0009999999999999987 -4.4878256444391695e-08 -1.0838372940556035e-05" rpy="0 0 0"/>
+    <mass value="0.1599937961847884"/>
+    <inertia ixx="3.1e-05" iyy="2.1e-05" izz="2.1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.188098 -0.02482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/f-wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.188098 -0.02482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshe/tt/f-wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+
+
+
+
+
+<joint name="arm2-to-g-rotater" type="revolute">
+  <origin xyz="-0.016543 -0.096892 -0.114886" rpy="0 0 0"/>
+  <parent link="arm2_1"/>
+  <child link="g-rotater_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="g-base-to-gripper1" type="revolute">
+  <origin xyz="0.022 0.007819 -0.016351" rpy="0 0 0"/>
+  <parent link="g-base_1"/>
+  <child link="gripper2_1"/>
+  <axis xyz="0.0 0.766044 -0.642788"/>
+  <limit upper="0.637045" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="g-base-togriper2" type="revolute">
+  <origin xyz="-0.022 0.007819 -0.016351" rpy="0 0 0"/>
+  <parent link="g-base_1"/>
+  <child link="gripper1_1"/>
+  <axis xyz="0.0 0.766044 -0.642788"/>
+  <limit upper="0.0" lower="-0.637045" effort="100" velocity="100"/>
+</joint>
+
+<joint name="g-rotater-to-g-base" type="revolute">
+  <origin xyz="-0.0407 -0.060243 -0.071867" rpy="0 0 0"/>
+  <parent link="g-rotater_1"/>
+  <child link="g-base_1"/>
+  <axis xyz="0.0 0.642788 0.766044"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="arm1-to-arm2" type="revolute">
+  <origin xyz="0.013 -0.120832 0.070612" rpy="0 0 0"/>
+  <parent link="arm1_1"/>
+  <child link="arm2_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit upper="3.839724" lower="-1.047198" effort="100" velocity="100"/>
+    <!-- <limit upper="-1.047198" lower="3.839724" effort="100" velocity="100"/> -->
+
+</joint>
+
+<joint name="base-to-rod" type="revolute">
+  <origin xyz="0.003 -0.088 0.0942" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rpd-link_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="2.094395" lower="-2.094395" effort="100" velocity="100"/>
+</joint>
+
+<joint name="rod-to-arm1" type="revolute">
+  <origin xyz="0.035025 -0.002772 0.365" rpy="0 0 0"/>
+  <parent link="rpd-link_1"/>
+  <child link="arm1_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <!-- <limit upper="0.523599" lower="-3.316126" effort="100" velocity="100"/> -->
+    <limit upper="1.308997" lower="-2.879793" effort="100" velocity="100"/>
+
+</joint>
+
+<joint name="base-t-t1" type="continuous">
+  <origin xyz="0.1666 -0.160793 0.0422" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="b-tyre1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="base-to-t2" type="continuous">
+  <origin xyz="-0.1651 -0.160793 0.0422" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="b-tyre2_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+
+<joint name="base-to-f-rotater" type="continuous">
+  <origin xyz="0.0 0.1662 0.07597" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="f-wheel-rotater_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="f-wheel-r-to-f-wheel" type="continuous">
+  <origin xyz="0.0 0.021898 -0.05115" rpy="0 0 0"/>
+  <parent link="f-wheel-rotater_1"/>
+  <child link="f-wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+</robot>
+<!-- <joint name="base-to-f-rotater" type="continuous">
+  <origin xyz="0.0 0.18 0.07597" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="f-wheel-r_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint>
+
+<joint name="f-rotater-to-f-wheels" type="continuous">
+  <origin xyz="-0.005032 0.0 -0.05127" rpy="0 0 0"/>
+  <parent link="f-wheel-r_1"/>
+  <child link="f-wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+</joint> -->
