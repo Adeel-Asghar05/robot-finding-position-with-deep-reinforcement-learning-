@@ -47,3 +47,19 @@ Arms & grippers
 Meshes (STL files in meshe/ directory)
 
 PyBullet loads this URDF to simulate physics, dynamics, and collisions.
+
+📊 Training Rewards
+
+The agent receives:
+
++10 × distance progress
+
++0.5 × cos(heading error) (alignment bonus)
+
++0.3 for purposeful turns (if they reduce heading error)
+
+-0.045 per step (time penalty)
+
++100 for reaching the goal
+
+-50 if maximum steps reached
