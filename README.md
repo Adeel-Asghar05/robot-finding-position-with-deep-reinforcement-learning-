@@ -72,6 +72,13 @@
 
     Add obstacles for path planning
 
+📦 Requirements
+
+    All dependencies are listed in requirements.txt.
+    This ensures you get the correct versions of PyBullet, Gymnasium, PyTorch, and Stable-Baselines3 for smooth training.
+
+    Install all dependencies
+
     Evaluate policies on real robot (ROS integration)
 
 📜 License
