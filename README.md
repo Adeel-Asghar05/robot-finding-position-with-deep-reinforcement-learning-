@@ -1,65 +1,80 @@
 🦾 Robot Navigation with PyBullet + PPO
 
-This project implements a custom robot navigation environment in PyBullet
- and trains it using Proximal Policy Optimization (PPO) from Stable-Baselines3
-.
+    This project implements a custom robot navigation environment in PyBullet
+    and trains it using Proximal Policy Optimization (PPO) from Stable-Baselines3
 
-The robot (defined in ryres.urdf) learns to navigate towards random goal positions using reinforcement learning.
+    The robot (defined in ryres.urdf) learns to navigate towards random goal positions using reinforcement learning.
 
 📂 Project Structure
-├── robot_env.py        # Main Python code (environment + training + testing)
-├── ryres.urdf          # Custom robot model (URDF format)
-├── meshe/              # STL mesh files for robot parts (used in URDF)
-└── README.md           # Project documentation
+    ├── robot_env.py        # Main Python code (environment + training + testing)
+    ├── ryres.urdf          # Custom robot model (URDF format)
+    ├── meshe/              # STL mesh files for robot parts (used in URDF)
+    └── README.md           # Project documentation
 
 ⚙️ Features
 
-✅ Custom Gymnasium Environment (RobotEnv)
+    ✅ Custom Gymnasium Environment (RobotEnv)
 
-✅ PyBullet physics simulation with gravity & collision
+    ✅ PyBullet physics simulation with gravity & collision
 
-✅ Discrete action space (Forward, Left, Right)
+    ✅ Discrete action space (Forward, Left, Right)
 
-✅ Reward shaping:
+    ✅ Reward shaping:
 
-Distance progress reward
+    Distance progress reward
 
-Heading alignment reward
+    Heading alignment reward
 
-Turning penalty/bonus
+    Turning penalty/bonus
 
-✅ Custom callback (EpisodeTracker) for episode tracking
+    ✅ Custom callback (EpisodeTracker) for episode tracking
 
-✅ Training with PPO (Stable-Baselines3)
+    ✅ Training with PPO (Stable-Baselines3)
 
-✅ URDF robot model (ryres.urdf) with wheels, arms, and grippers
+    ✅ URDF robot model (ryres.urdf) with wheels, arms, and grippers
 
 🤖 Robot Model (URDF)
 
-The robot is defined in ryres.urdf, which contains:
+    The robot is defined in ryres.urdf, which contains:
 
-Base link
+    Base link
 
-Wheels (drive + support wheels)
+    Wheels (drive + support wheels)
 
-Arms & grippers
+    Arms & grippers
 
-Meshes (STL files in meshe/ directory)
+    Meshes (STL files in meshe/ directory)
 
-PyBullet loads this URDF to simulate physics, dynamics, and collisions.
+    PyBullet loads this URDF to simulate physics, dynamics, and collisions.
 
 📊 Training Rewards
 
-The agent receives:
+    The agent receives:
+ 
+    +10 × distance progress
 
-+10 × distance progress
+    +0.5 × cos(heading error) (alignment bonus)
 
-+0.5 × cos(heading error) (alignment bonus)
+    +0.3 for purposeful turns (if they reduce heading error)
 
-+0.3 for purposeful turns (if they reduce heading error)
+    -0.045 per step (time penalty)
 
--0.045 per step (time penalty)
+    +100 for reaching the goal
 
-+100 for reaching the goal
+    -50 if maximum steps reached
 
--50 if maximum steps reached
+
+📌 To-Do / Future Improvements
+
+    Continuous action space (wheel velocities)
+
+    urriculum learning (progressively harder goals)
+
+    Add obstacles for path planning
+
+    Evaluate policies on real robot (ROS integration)
+
+📜 License
+
+    This project is licensed under the MIT License.
+    Feel free to use, modify, and share!
